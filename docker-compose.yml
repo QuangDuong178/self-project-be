@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  account:
+    image: quangduong17820/account:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      quangduong17820-networks:
+  loans:
+    image: quangduong17820/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      quangduong17820-networks:
+  cards:
+    image: quangduong17820/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      quangduong17820-networks:
+
+networks:
+  quangduong17820-networks:
